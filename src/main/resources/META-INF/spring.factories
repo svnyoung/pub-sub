@@ -1,0 +1,4 @@
+# Auto Configure
+org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
+com.svnyoung.pubsub.spring.autoconfigure.RocketAutoConfigMessageSource,\
+com.svnyoung.pubsub.spring.autoconfigure.MessageAutoConfiguration
