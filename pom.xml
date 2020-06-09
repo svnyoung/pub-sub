@@ -5,7 +5,7 @@
 
     <groupId>com.svnyoung</groupId>
     <modelVersion>4.0.0</modelVersion>
-    <artifactId>pubsub</artifactId>
+    <artifactId>pub-sub</artifactId>
     <version>1.0.0-SNAPSHOT</version>
 
     <properties>
