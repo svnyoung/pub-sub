@@ -1,7 +1,7 @@
-package com.svnyoung.pubsub.spring.listener.handler;
+package com.svnyoung.pubsub.spring.subscriber.handler;
 
 import com.svnyoung.pubsub.exception.MessageHandlerException;
-import com.svnyoung.pubsub.spring.listener.ListenerBean;
+import com.svnyoung.pubsub.spring.subscriber.ListenerBean;
 import com.svnyoung.pubsub.Reply;
 
 import java.io.Serializable;

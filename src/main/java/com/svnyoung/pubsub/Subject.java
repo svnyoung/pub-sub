@@ -33,15 +33,26 @@ public class Subject implements Serializable {
      * @return
      * @throws
      */
-    private String chooser;
-
+    private String label;
 
 
     @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (!(o instanceof Subject)) return false;
+
+        Subject subject = (Subject) o;
+
+        if (!getTopic().equals(subject.getTopic())) return false;
+        if (getMessageModel() != subject.getMessageModel()) return false;
+        return getLabel().equals(subject.getLabel());
+    }
+
+    @Override
     public int hashCode() {
-        int result = topic != null ? topic.hashCode() : 0;
-        result = 31 * result + (messageModel != null ? messageModel.hashCode() : 0);
-        result = 31 * result + (chooser != null ? chooser.hashCode() : 0);
+        int result = getTopic().hashCode();
+        result = 31 * result + getMessageModel().hashCode();
+        result = 31 * result + getLabel().hashCode();
         return result;
     }
 
@@ -63,24 +74,13 @@ public class Subject implements Serializable {
         return this;
     }
 
-    public String getChooser() {
-        return chooser;
+    public String getLabel() {
+        return label;
     }
 
-    public Subject setChooser(String chooser) {
-        this.chooser = chooser;
+    public Subject setLabel(String label) {
+        this.label = label;
         return this;
     }
 
-    @Override
-    public boolean equals(Object o) {
-        if (this == o) {return true;}
-        if (o == null || getClass() != o.getClass()) {return false;}
-
-        Subject subject = (Subject) o;
-
-        if (topic != null ? !topic.equals(subject.topic) : subject.topic != null) {return false;}
-        if (messageModel != subject.messageModel) {return false;}
-        return chooser != null ? chooser.equals(subject.chooser) : subject.chooser == null;
-    }
 }

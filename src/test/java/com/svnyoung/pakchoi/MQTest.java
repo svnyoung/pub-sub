@@ -1,11 +1,11 @@
-package com.svnyoung.pubsub.test;
+package com.svnyoung.pakchoi;
 
 import com.svnyoung.pubsub.MessageSource;
 import com.svnyoung.pubsub.Subject;
 import com.svnyoung.pubsub.Terminal;
 import com.svnyoung.pubsub.message.MessageModel;
-import com.svnyoung.pubsub.spring.listener.Listener;
-import com.svnyoung.pubsub.spring.listener.Listeners;
+import com.svnyoung.pubsub.spring.subscriber.Listener;
+import com.svnyoung.pubsub.spring.subscriber.Listeners;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
@@ -31,8 +31,8 @@ public class MQTest {
     private MessageSource messageSource;
 
     @Listeners(value = {
-            @Listener(depend = "GroupDev",topic = "TopicDev",chooser = "*"),
-            @Listener(depend = "GroupDev",topic = "TopicDev",chooser = "*")
+            @Listener(group = "GroupDev",topic = "TopicDev",chooser = "*"),
+            @Listener(group = "GroupDev",topic = "TopicDev",chooser = "*")
     })
     public void receive(String ... str){
         System.out.println(str);

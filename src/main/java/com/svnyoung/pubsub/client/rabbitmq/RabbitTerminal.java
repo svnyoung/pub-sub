@@ -42,7 +42,7 @@ public class RabbitTerminal extends AbstractTerminal {
         try {
             Connection connection = rabbitMessageSource.getConnectionFactory().newConnection();
             Optional<Channel> channel = connection.openChannel();
-            channel.get().exchangeBind(this.getSubject().getTopic(),depend,this.getSubject().getChooser());
+            channel.get().exchangeBind(this.getSubject().getTopic(),depend,this.getSubject().getLabel());
         }catch (Exception e){
 
         }

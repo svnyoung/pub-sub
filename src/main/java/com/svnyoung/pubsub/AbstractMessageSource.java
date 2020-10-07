@@ -48,7 +48,7 @@ public abstract class AbstractMessageSource implements MessageSource{
     public Terminal getTerminal(String topic,String chooser) {
         return getTerminal(new Subject()
                 .setTopic(topic)
-                .setChooser(chooser)
+                .setLabel(chooser)
                 .setMessageModel(MessageModel.POINT_TO_POINT));
     }
 

@@ -2,7 +2,7 @@ package com.svnyoung.pubsub.spring.autoconfigure;
 
 import com.svnyoung.pubsub.MessageSource;
 import com.svnyoung.pubsub.spring.context.MessageContextAwareBeanPostProcessor;
-import com.svnyoung.pubsub.spring.listener.handler.ListenersAnnotationBeanPostProcessor;
+import com.svnyoung.pubsub.spring.subscriber.handler.ListenersAnnotationBeanPostProcessor;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.DisposableBean;

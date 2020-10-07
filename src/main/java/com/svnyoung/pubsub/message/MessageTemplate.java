@@ -1,7 +1,7 @@
 package com.svnyoung.pubsub.message;
 
 import com.svnyoung.pubsub.MessageSource;
-import com.svnyoung.pubsub.spring.listener.handler.MessageHandler;
+import com.svnyoung.pubsub.spring.subscriber.handler.MessageHandler;
 
 import java.io.Serializable;
 

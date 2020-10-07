@@ -1,10 +1,10 @@
-package com.svnyoung.pubsub.spring.listener.handler;
+package com.svnyoung.pubsub.spring.subscriber.handler;
 
 import com.svnyoung.pubsub.Reply;
 import com.svnyoung.pubsub.exception.MessageHandlerException;
-import com.svnyoung.pubsub.spring.listener.Listener;
-import com.svnyoung.pubsub.spring.listener.ListenerBean;
-import com.svnyoung.pubsub.spring.listener.Listeners;
+import com.svnyoung.pubsub.spring.subscriber.Listener;
+import com.svnyoung.pubsub.spring.subscriber.ListenerBean;
+import com.svnyoung.pubsub.spring.subscriber.Listeners;
 import org.apache.commons.lang3.ArrayUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -64,7 +64,7 @@ public final  class MethodInterceptHandler extends AbstractMessageHandler{
             ListenerBean listenerBean = new ListenerBean();
             listenerBean.setTopic(listener.topic());
             listenerBean.setChooser(listener.chooser());
-            listenerBean.setDepend(listener.depend());
+            listenerBean.setDepend(listener.group());
             listenerBean.setMessageSource(listener.messageSource());
             listenerBean.setMessageModel(listener.messageModel());
             listenerBeans.add(listenerBean);

@@ -67,7 +67,7 @@ public class RocketTerminal extends AbstractTerminal {
             return;
         }
         try {
-            String rocketChooser = subject.getChooser();
+            String rocketChooser = subject.getLabel();
             DefaultMQPushConsumer consumer = new DefaultMQPushConsumer(group);
             consumer.setNamesrvAddr(messageSource.getNamesrvAddr());
             consumer.setConsumeThreadMax(messageSource.getConsumerThreadMax());
@@ -122,7 +122,7 @@ public class RocketTerminal extends AbstractTerminal {
         RocketMessageSource messageSource = (RocketMessageSource)this.getMessageSource();
         byte[] bs = messageSource.getSerializer().serialize(msg);
         try {
-            org.apache.rocketmq.common.message.Message message = new org.apache.rocketmq.common.message.Message(this.getSubject().getTopic(),StringUtils.defaultString(this.getSubject().getChooser(),StringUtils.EMPTY),bs);
+            org.apache.rocketmq.common.message.Message message = new org.apache.rocketmq.common.message.Message(this.getSubject().getTopic(),StringUtils.defaultString(this.getSubject().getLabel(),StringUtils.EMPTY),bs);
             if(delayLevel != null){
                 message.setDelayTimeLevel(delayLevel.getLevelId());
             }

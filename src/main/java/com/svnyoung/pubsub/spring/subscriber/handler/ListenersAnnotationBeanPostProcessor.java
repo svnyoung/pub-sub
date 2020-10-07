@@ -1,5 +1,5 @@
 
-package com.svnyoung.pubsub.spring.listener.handler;
+package com.svnyoung.pubsub.spring.subscriber.handler;
 
 import com.svnyoung.pubsub.MessageSource;
 import com.svnyoung.pubsub.Reply;
@@ -7,9 +7,9 @@ import com.svnyoung.pubsub.Subject;
 import com.svnyoung.pubsub.Terminal;
 import com.svnyoung.pubsub.message.Message;
 import com.svnyoung.pubsub.message.MessageModel;
-import com.svnyoung.pubsub.spring.listener.Listener;
-import com.svnyoung.pubsub.spring.listener.ListenerBean;
-import com.svnyoung.pubsub.spring.listener.Listeners;
+import com.svnyoung.pubsub.spring.subscriber.Listener;
+import com.svnyoung.pubsub.spring.subscriber.ListenerBean;
+import com.svnyoung.pubsub.spring.subscriber.Listeners;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.aop.framework.Advised;
@@ -130,7 +130,7 @@ public class ListenersAnnotationBeanPostProcessor
 
                         logger.info("开始注册Listener,depend:{},chooser:{},topic:{},messageMode:{}",depend,chooser,topic,messageModel);
                         Terminal terminal = messageSource.getTerminal(
-                                new Subject().setChooser(chooser)
+                                new Subject().setLabel(chooser)
                                         .setTopic(topic)
                                         .setMessageModel(listenerBean.getMessageModel()));
                         terminal.subscribe(

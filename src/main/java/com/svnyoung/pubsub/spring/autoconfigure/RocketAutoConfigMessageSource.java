@@ -10,7 +10,6 @@ import org.springframework.boot.autoconfigure.condition.ConditionalOnClass;
 import org.springframework.context.annotation.Import;
 
 @ConditionalOnClass(name = {"org.apache.rocketmq.client.ClientConfig"})
-@Import(MessageAutoConfiguration.class)
 public class RocketAutoConfigMessageSource extends RocketMessageSource {
 
         /**

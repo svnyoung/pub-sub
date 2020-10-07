@@ -1,4 +1,4 @@
-package com.svnyoung.pubsub.spring.listener.handler;
+package com.svnyoung.pubsub.spring.subscriber.handler;
 
 import com.svnyoung.pubsub.spring.autoconfigure.MessageAutoConfiguration;
 import org.slf4j.Logger;

@@ -1,4 +1,4 @@
-package com.svnyoung.pubsub.spring.listener;
+package com.svnyoung.pubsub.spring.subscriber;
 
 import java.lang.annotation.*;
 

@@ -1,4 +1,4 @@
-package com.svnyoung.pubsub.spring.listener;
+package com.svnyoung.pubsub.spring.subscriber;
 
 import com.svnyoung.pubsub.message.MessageModel;
 
@@ -23,7 +23,7 @@ public @interface Listener {
     /**
      * 分组
      */
-    String depend() default "";
+    String group() default "";
 
     /**
      * topic

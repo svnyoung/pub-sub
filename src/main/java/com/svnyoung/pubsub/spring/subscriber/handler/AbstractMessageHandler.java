@@ -1,4 +1,4 @@
-package com.svnyoung.pubsub.spring.listener.handler;
+package com.svnyoung.pubsub.spring.subscriber.handler;
 
 import org.apache.commons.lang3.ArrayUtils;
 import org.springframework.util.Assert;
