@@ -9,6 +9,9 @@ public @interface Binder {
     String topic();
 
 
+    /**
+     * 标签
+     * **/
     String label() default "";
 
     /**

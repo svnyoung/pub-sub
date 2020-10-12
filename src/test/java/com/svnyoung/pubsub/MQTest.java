@@ -1,8 +1,5 @@
-package com.svnyoung.pakchoi;
+package com.svnyoung.pubsub;
 
-import com.svnyoung.pubsub.MessageSource;
-import com.svnyoung.pubsub.Subject;
-import com.svnyoung.pubsub.Terminal;
 import com.svnyoung.pubsub.message.MessageModel;
 import com.svnyoung.pubsub.spring.subscriber.Listener;
 import com.svnyoung.pubsub.spring.subscriber.Listeners;
@@ -44,7 +41,7 @@ public class MQTest {
         Subject subject = new Subject();
         subject.setTopic("TopicDev");
         subject.setMessageModel(MessageModel.POINT_TO_POINT);
-        subject.setChooser("*");
+        subject.setLabel("*");
         Terminal terminal = messageSource.getTerminal(subject);
         terminal.publish("123","dfdfdfdfd");
     }

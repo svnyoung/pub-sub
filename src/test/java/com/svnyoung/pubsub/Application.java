@@ -1,4 +1,4 @@
-package com.svnyoung.pakchoi;
+package com.svnyoung.pubsub;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
